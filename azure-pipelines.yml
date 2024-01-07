@@ -12,11 +12,7 @@ pool:
 
 
 steps:
-- script: |
-    java -version
-  env:
-    JAVA_HOME: $(JAVA_HOME_8_X64)
-    PATH: $(JAVA_HOME_8_X64)/bin;$(PATH)
+
 
 
 - task: Maven@3

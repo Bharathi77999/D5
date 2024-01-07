@@ -12,11 +12,7 @@ pool:
 
 
 steps:
-- script: |
-    java -version
-  env:
-    JAVA_HOME: $(JAVA_HOME_8_X64)
-    PATH: $(PATHC:\Program Files\Java\jdk-21)/bin;$(PATHC:\Program Files\Java\jdk-21\bin)
+
 
 - task: Maven@3
   inputs:
@@ -28,3 +24,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: |
+    java -version
+  env:
+    JAVA_HOME: $(JAVA_HOME_8_X64)
+    PATH: $(PATHC:\Program Files\Java\jdk-21)/bin;$(PATHC:\Program Files\Java\jdk-21\bin)
